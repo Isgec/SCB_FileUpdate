@@ -250,18 +250,18 @@ public partial class Form1 : Form
         catch (Exception ex)
         {
             WriteToErrorLog(ex.Message, ex.StackTrace, ex.Source);
-            System.Timers.Timer timer = new System.Timers.Timer(5000);
-            timer.Elapsed += Timer_Elapsed;
-            timer.Start();
-            lblInsert.Text = "Error occurs while loading Bank file into BaaN LN Table!";
+                System.Timers.Timer timer = new System.Timers.Timer(5000);
+                timer.Elapsed += Timer_Elapsed;
+                timer.Start();
+                lblInsert.Text = "Error occurs while loading Bank file into BaaN LN Table!";
         }
         finally
         {
-               
-            System.Timers.Timer timer = new System.Timers.Timer(5000);
-            timer.Elapsed += Timer_Elapsed;
-            timer.Start();
-        }
+
+                System.Timers.Timer timer = new System.Timers.Timer(5000);
+                timer.Elapsed += Timer_Elapsed;
+                timer.Start();
+            }
 
     }
     public void btnExport_Click(object sender, EventArgs e)
@@ -287,10 +287,10 @@ public partial class Form1 : Form
                         string sCSVFilePath = @"C:\host2host\documents\payments\out\isgec_h2h_payments\" + sFilename;
                         string sCSVFilePath2 = @"C:\host2host\documents\payments\out\h2h_payments\" + sFilename;
                         ExportCSV(dt, sCSVFilePath, sCSVFilePath2, sFilename);
-                        System.Timers.Timer timer = new System.Timers.Timer(5000);
-                        timer.Elapsed += Timer_Elapsed;
-                        timer.Start();
-                    }
+                            System.Timers.Timer timer = new System.Timers.Timer(15000);
+                            timer.Elapsed += Timer_Elapsed;
+                            timer.Start();
+                        }
                 }
             }
         }
